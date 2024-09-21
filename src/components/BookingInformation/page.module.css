@@ -1,0 +1,53 @@
+.container {
+  width: 100%;
+  width: 100rem;
+}
+
+.alignment {
+  margin: 0 auto;
+  padding: 1rem 4rem;
+  display: flex;
+  border: 2px solid black;
+  border-radius: 2rem;
+  justify-content: space-between;
+}
+
+.bookingArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 3px solid black;
+  flex: 1;
+  cursor: pointer;
+
+  &:first-child {
+    flex-direction: column;
+  }
+}
+
+.text {
+  font-size: 1.4rem;
+}
+
+.addingGuest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  cursor: pointer;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4rem;
+}
+
+.search {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.5rem;
+  background-color: #f7686d;
+  border-radius: 50%;
+}

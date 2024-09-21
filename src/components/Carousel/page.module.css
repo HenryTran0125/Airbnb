@@ -1,0 +1,10 @@
+.container {
+  height: 100vh;
+}
+
+.image {
+  height: 100%;
+  width: 100vw;
+  background-position: center;
+  filter: brightness(50%);
+}
