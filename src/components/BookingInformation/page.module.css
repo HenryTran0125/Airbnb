@@ -1,13 +1,13 @@
 .container {
   width: 100%;
-  width: 100rem;
+  width: 128rem;
 }
 
 .alignment {
   margin: 0 auto;
   padding: 1rem 4rem;
   display: flex;
-  border: 2px solid black;
+  border: 2px solid #d1d5dc;
   border-radius: 2rem;
   justify-content: space-between;
 }
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 3px solid black;
+  border-right: 1px solid #d1d5dc;
   flex: 1;
   cursor: pointer;
 
@@ -26,7 +26,21 @@
 }
 
 .text {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  font-weight: 450;
+  color: #fff;
+}
+
+.textWhereWillYouGo {
+  font-size: 1.8rem;
+  font-weight: 450;
+  color: #d1d5dc;
+}
+
+.textIsNotHomePage {
+  font-size: 1.8rem;
+  font-weight: 450;
+  color: black;
 }
 
 .addingGuest {

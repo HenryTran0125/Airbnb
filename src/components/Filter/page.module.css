@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 
 .ul {
@@ -14,7 +14,23 @@
 .li {
   margin-right: 1.4rem;
   cursor: pointer;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  border: 2px solid #fff;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.liIsNotHomePage {
+  margin-right: 1.4rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  border: 2px solid #d1d5dc;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 450;
+  color: black;
 }
 
 .li:hover {

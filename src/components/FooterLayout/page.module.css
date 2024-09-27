@@ -1,0 +1,30 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 2.4rem 0;
+}
+
+.h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: black;
+}
+
+.ul {
+  margin-top: 1.2rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.li {
+  margin-top: 1.2rem;
+  color: black;
+  font-size: 1.4rem;
+  cursor: pointer;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import styles from "./page.module.css";
 
-function Filter() {
+function Filter({ isHomePage }) {
   return (
     <div className={styles.container}>
       <ul className={styles.ul}>
@@ -12,7 +13,10 @@ function Filter() {
           "Phòng và phòng ngủ",
           "Bộ lọc khác ",
         ].map((item, index) => (
-          <li className={styles.li} key={index}>
+          <li
+            className={isHomePage ? styles.li : styles.liIsNotHomePage}
+            key={index}
+          >
             {item}
           </li>
         ))}

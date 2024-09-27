@@ -1,0 +1,9 @@
+.container {
+  width: 100%;
+}
+
+.alignment {
+  width: 128rem;
+  margin: 0 auto;
+  display: flex;
+}

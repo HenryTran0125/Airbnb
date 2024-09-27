@@ -20,7 +20,7 @@ function Navigation() {
         <ul className={styles.ul}>
           {["Home", "About", "Services", "Pricing", "Contact"].map(
             (item, index) => (
-              <li className={styles.li} key={index}>
+              <li key={index}>
                 <Link
                   to={item.toLowerCase()}
                   onClick={() => testClick(item.toLowerCase())}

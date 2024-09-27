@@ -1,22 +1,29 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import styles from "./page.module.css";
 import search from "../../assets/icon/search.svg";
 
-function BookingInformation() {
+function BookingInformation({ isHomePage }) {
   return (
     <div className={styles.container}>
       <div className={styles.alignment}>
         <div className={styles.bookingArea}>
-          <div className={styles.text}>Địa điểm</div>
-          <div className={styles.text}>Bạn sắp đi đâu</div>
+          <div className={isHomePage ? styles.text : styles.textIsNotHomePage}>
+            Địa điểm
+          </div>
+          <div className={styles.textWhereWillYouGo}>Bạn sắp đi đâu</div>
         </div>
 
         <div className={styles.bookingArea}>
-          <div className={styles.text}>21/09/2024 - 30/09/2024</div>
+          <div className={isHomePage ? styles.text : styles.textIsNotHomePage}>
+            21/09/2024 - 30/09/2024
+          </div>
         </div>
 
         <div className={styles.addingGuest}>
-          <div className={styles.text}>Thêm khách</div>
+          <div className={isHomePage ? styles.text : styles.textIsNotHomePage}>
+            Thêm khách
+          </div>
 
           <div className={styles.imageContainer}>
             <img src={search} className={styles.search} />

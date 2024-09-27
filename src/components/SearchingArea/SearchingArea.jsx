@@ -1,14 +1,16 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import BookingInformation from "../BookingInformation/BookingInformation";
+import BookingLocation from "../BookingLocation/BookingLocation";
 import Filter from "../Filter/Filter";
 import styles from "./page.module.css";
 
-function SearchingArea() {
+function SearchingArea({ isHomePage }) {
   return (
-    <section className={styles.section}>
-      <BookingInformation />
+    <section className={isHomePage ? styles.section : styles.isNotHomePage}>
+      <BookingInformation isHomePage={isHomePage} />
 
-      <Filter />
+      <Filter isHomePage={isHomePage} />
     </section>
   );
 }

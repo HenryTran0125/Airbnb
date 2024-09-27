@@ -1,6 +1,14 @@
 .section {
   position: absolute;
-  top: 35%;
+  top: 49%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.isNotHomePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
 }

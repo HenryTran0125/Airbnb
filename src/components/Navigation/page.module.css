@@ -36,12 +36,14 @@
 .ul {
   display: flex;
   list-style-type: none;
+  gap: 4rem;
 }
 
 .linkElement {
-  margin-right: 3rem;
-  font-size: 1.5rem;
+  /* margin-right: 1rem; */
+  font-size: 2rem;
   color: #fff;
+  line-height: 1;
 }
 
 .linkElement:hover {
