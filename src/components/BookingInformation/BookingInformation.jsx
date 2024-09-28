@@ -11,6 +11,7 @@ function BookingInformation({ isHomePage }) {
           <div className={isHomePage ? styles.text : styles.textIsNotHomePage}>
             Địa điểm
           </div>
+
           <div className={styles.textWhereWillYouGo}>Bạn sắp đi đâu</div>
         </div>
 

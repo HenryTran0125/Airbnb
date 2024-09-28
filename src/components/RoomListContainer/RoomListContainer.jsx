@@ -9,8 +9,6 @@ function RoomListContainer({ data, city }) {
     <div className={styles.container}>
       <div className={styles.alignment}>
         <RoomList data={data} city={city} />
-
-        <Map />
       </div>
     </div>
   );

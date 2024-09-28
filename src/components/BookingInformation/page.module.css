@@ -1,6 +1,6 @@
 .container {
-  width: 100%;
-  width: 128rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .alignment {
