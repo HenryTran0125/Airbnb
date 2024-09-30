@@ -2,10 +2,10 @@ import { useQuery } from "@tanstack/react-query";
 import apiToken from "../config/apiConfig";
 
 /* eslint-disable no-unused-vars */
-async function getRoomListById(id) {
+export async function getRoomInformationById(id) {
   try {
     const response = await fetch(
-      `https://airbnbnew.cybersoft.edu.vn/api/phong-thue/lay-phong-theo-vi-tri?maViTri=${id}`,
+      `https://airbnbnew.cybersoft.edu.vn/api/phong-thue/${id}`,
       {
         method: "GET",
         headers: {
@@ -17,6 +17,7 @@ async function getRoomListById(id) {
 
     const data = await response.json();
     // console.log(data);
+
     return data;
   } catch (error) {
     console.error(error);
@@ -24,14 +25,14 @@ async function getRoomListById(id) {
   }
 }
 
-export function useGetRoomListById(id) {
+export function useGetRoomInformationById(id) {
   return useQuery({
     queryKey: ["Id", id],
-    queryFn: () => getRoomListById(id),
+    queryFn: () => getRoomInformationById(id),
     staleTime: 0,
     cacheTime: 0,
-    refetchOnWindowFocus: true,
     retry: 1,
+    refetchOnWindowFocus: true,
     enabled: !!id,
   });
 }

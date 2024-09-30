@@ -22,7 +22,7 @@ function BookingLocation() {
   const dataContent = data.content;
 
   const filteredData = dataContent.filter((element) => element.id < 10);
-  // console.log(filteredData);
+  console.log(filteredData);
   return (
     <div className={styles.container}>
       <div className={styles.h1Container}>
@@ -43,7 +43,6 @@ function BookingLocation() {
 
               <div className={styles.textContent}>
                 <div className={styles.text}>{item.tinhThanh}</div>
-                {/* <div className={styles.time}>{item.time} lái xe</div> */}
               </div>
             </Link>
           </li>

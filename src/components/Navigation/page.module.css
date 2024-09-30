@@ -6,6 +6,11 @@
   z-index: 10;
 }
 
+.activeNav {
+  background-color: red;
+  color: black;
+}
+
 .container {
   display: flex;
   justify-content: space-between;

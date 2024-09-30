@@ -13,6 +13,7 @@ export function convertInformation(text) {
     phongNgu: "Phòng ngủ",
     giuong: "Giường",
     phongTam: "Phòng tắm",
+    khach: "Khách",
   };
 
   text = lookUp[text];

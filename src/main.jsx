@@ -9,6 +9,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Location from "./pages/Location/Location";
+import RoomDetail from "./pages/RoomDetail/RoomDetail";
 
 const router = createBrowserRouter([
   {
@@ -20,8 +21,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "location/:id",
+        path: "location/:city",
         element: <Location />,
+      },
+      {
+        path: "room-detail/:room",
+        element: <RoomDetail />,
       },
     ],
   },

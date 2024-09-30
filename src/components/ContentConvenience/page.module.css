@@ -1,0 +1,27 @@
+.convenience {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.h4 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  /* color: #d1d5dc; */
+}
+
+.ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 1rem;
+  margin-left: 2rem;
+}
+
+.text {
+  white-space: wrap;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}

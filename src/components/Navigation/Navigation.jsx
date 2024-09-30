@@ -1,14 +1,29 @@
 /* eslint-disable no-unused-vars */
 import styles from "./page.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import logo from "../../assets/logo.svg";
 import avatar from "../../assets/icon/avatar.png";
 import Button from "../../common/Button/Button";
+import { useEffect, useState } from "react";
 function Navigation() {
-  function testClick(string) {
-    console.log(string);
-  }
+  const location = useLocation();
+  // console.log(location.pathname);
+  // const [isScrolled, setIsScrolled] = useState(false);
+
+  // const handleScroll = () => {
+  //   const scrollY = window.scrollY; // Lấy vị trí cuộn
+  //   setIsScrolled(scrollY > 100); // Thay đổi giá trị 100 theo khoảng cách bạn muốn
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll); // Dọn dẹp sự kiện khi component unmount
+  //   };
+  // }, []);
+
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
@@ -21,11 +36,7 @@ function Navigation() {
           {["Home", "About", "Services", "Pricing", "Contact"].map(
             (item, index) => (
               <li key={index}>
-                <Link
-                  to={item.toLowerCase()}
-                  onClick={() => testClick(item.toLowerCase())}
-                  className={styles.linkElement}
-                >
+                <Link to={item.toLowerCase()} className={styles.linkElement}>
                   {item}
                 </Link>
               </li>

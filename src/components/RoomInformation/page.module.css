@@ -1,0 +1,120 @@
+.h1 {
+  margin-bottom: 3rem;
+}
+
+.imgContainer {
+  margin-bottom: 3rem;
+}
+
+.img {
+  height: auto;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.detailContainer {
+  display: flex;
+}
+
+.textContent {
+  flex: 1.5;
+}
+
+.wrapperQuickContent {
+  border-bottom: 2px solid #d5d1dc;
+  padding-bottom: 2rem;
+}
+
+.h3 {
+  font-size: 2rem;
+  font-weight: 550;
+  margin-bottom: 2rem;
+}
+
+.ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.li {
+  margin-right: 1rem;
+  font-size: 1.6rem;
+  &:first-child {
+    list-style-type: none;
+  }
+}
+
+.priceTable {
+  flex: 1;
+}
+
+.ulTable {
+  margin-top: 2rem;
+}
+
+.liService {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.iconContainer {
+  height: 100%;
+  width: auto;
+}
+
+.serviceContainer {
+  height: 100%;
+  width: auto;
+}
+
+.h5 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.p {
+  font-size: 1.4rem;
+  color: #4b5563;
+}
+
+.roomDescription {
+  border-top: 1px solid #d5d1dc;
+  border-bottom: 1px solid #d5d1dc;
+  padding: 2rem 0;
+}
+
+.translate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.4rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.translate:hover {
+  background-color: #dee2e6;
+}
+
+.description {
+  font-size: 1.6rem;
+  padding: 1.2rem 0;
+  text-align: justify;
+}
+
+.strong {
+  font-size: 1.6rem;
+  text-decoration: underline;
+}

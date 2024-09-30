@@ -1,21 +1,22 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { convertInformation } from "../../helpers/convertRoomInformation";
+import { Link } from "react-router-dom";
 import Convenience from "../Convenience/Convenience";
 import styles from "./page.module.css";
+import { correctUrlRoomName } from "../../helpers/correctUrlRoomName";
+import PropTypes from "prop-types";
 
 function RoomList({ data, city }) {
+  if (!data || data.length === 0) {
+    return <div>No data available</div>;
+  }
+
+  // if (!Array.isArray(data)) {
+  //   return <div>Không có dữ liệu</div>;
+  // }
+
+  console.log(Array.isArray(data));
+
   const places = data.length;
-  const data1 = Object.entries(data[1]).filter(
-    ([key, value]) => value === true
-  );
-  const data2 = Object.entries(data[1]).filter(
-    ([key, value]) =>
-      key === "phongTam" || key === "giuong" || key === "phongNgu"
-  );
-  // console.log(data);
-  // console.log(data1);
-  console.log(data[0]);
 
   return (
     <div className={styles.container}>
@@ -30,20 +31,26 @@ function RoomList({ data, city }) {
           <ul>
             {data.map((item, index) => (
               <li key={index} className={styles.li}>
-                <div
-                  className={
-                    item.id < 100
-                      ? styles.imgContainer
-                      : styles.specialImgContainer
-                  }
+                <Link
+                  className={styles.link}
+                  to={`/room-detail/${item.id}`}
+                  state={{ id: item.id }}
                 >
-                  <img
-                    src={item.hinhAnh}
-                    className={item.id < 100 ? styles.img : styles.specialImg}
-                  />
-                </div>
+                  <div
+                    className={
+                      item.id < 100
+                        ? styles.imgContainer
+                        : styles.specialImgContainer
+                    }
+                  >
+                    <img
+                      src={item.hinhAnh}
+                      className={item.id < 100 ? styles.img : styles.specialImg}
+                    />
+                  </div>
 
-                <Convenience item={item} />
+                  <Convenience item={item} />
+                </Link>
               </li>
             ))}
           </ul>
@@ -54,3 +61,8 @@ function RoomList({ data, city }) {
 }
 
 export default RoomList;
+
+RoomList.propTypes = {
+  data: PropTypes.array,
+  city: PropTypes.string,
+};

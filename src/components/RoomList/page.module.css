@@ -5,6 +5,7 @@
 
 .textResult {
   font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .h1 {
@@ -12,13 +13,28 @@
   margin-bottom: 2rem;
 }
 
-.li {
+.link {
   display: flex;
   list-style-type: none;
   margin-bottom: 5rem;
   cursor: pointer;
   border: 1px solid #d1d5dc;
   border-radius: 2rem;
+  color: black;
+}
+
+.link:hover {
+  color: black;
+}
+
+.li {
+  /* display: flex;
+  list-style-type: none;
+  margin-bottom: 5rem;
+  cursor: pointer;
+  border: 1px solid #d1d5dc;
+  border-radius: 2rem; */
+  list-style-type: none;
 }
 
 .imgContainer {
