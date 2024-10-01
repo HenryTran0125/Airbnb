@@ -1,0 +1,13 @@
+.imgContainer {
+  display: flex;
+}
+
+.img {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.img:hover {
+}

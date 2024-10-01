@@ -16,6 +16,7 @@ function Location() {
   const location = useLocation();
   const id = location.state?.id;
   const city = location.state?.city;
+
   const {
     data: roomListData,
     error: roomListError,
@@ -37,7 +38,7 @@ function Location() {
     return <div>Error: {roomListError.message || "An error occurred"}</div>;
   }
 
-  const contentRoomListData = roomListData.content;
+  const contentRoomListData = roomListData?.content;
   // console.log(id, city, contentRoomListData);
 
   return (

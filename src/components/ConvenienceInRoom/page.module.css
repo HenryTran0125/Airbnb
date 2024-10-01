@@ -1,0 +1,32 @@
+.iconContainer {
+  margin: 3rem 0;
+}
+
+.h2 {
+  font-size: 2.2rem;
+  font-weight: 550;
+  margin-bottom: 2rem;
+}
+
+.ulIcon {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.liIcon {
+  display: flex;
+  align-items: end;
+  width: 85%;
+  margin-bottom: 2rem;
+
+  &:nth-child(2n) {
+    width: 15%;
+  }
+}
+
+.textIcon {
+  font-size: 1.6rem;
+  margin-left: 1rem;
+}

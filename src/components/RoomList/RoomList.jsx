@@ -29,7 +29,7 @@ function RoomList({ data, city }) {
 
         <div>
           <ul>
-            {data.map((item, index) => (
+            {data?.map((item, index) => (
               <li key={index} className={styles.li}>
                 <Link
                   className={styles.link}

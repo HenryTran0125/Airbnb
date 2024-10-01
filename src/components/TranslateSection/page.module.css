@@ -1,0 +1,31 @@
+.roomDescription {
+  border-top: 1px solid #d5d1dc;
+  border-bottom: 1px solid #d5d1dc;
+  padding: 2rem 0;
+}
+
+.translate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.4rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.translate:hover {
+  background-color: #dee2e6;
+}
+
+.description {
+  font-size: 1.6rem;
+  padding: 1.2rem 0;
+  text-align: justify;
+}
+
+.strong {
+  font-size: 1.6rem;
+  text-decoration: underline;
+}

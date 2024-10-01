@@ -7,7 +7,6 @@ import { useGetRoomInformationById } from "../../service/getRoomInformationById"
 function RoomDetail() {
   const location = useLocation();
   const id = location.state?.id;
-  console.log(typeof id);
   const {
     data: roomData,
     error: roomError,

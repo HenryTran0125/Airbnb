@@ -1,0 +1,37 @@
+.ulService {
+  margin: 2rem 0;
+}
+
+.liService {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.iconContainer {
+  height: 100%;
+  width: auto;
+}
+
+.serviceContainer {
+  height: 100%;
+  width: auto;
+}
+
+.h5 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.p {
+  font-size: 1.4rem;
+  color: #4b5563;
+}

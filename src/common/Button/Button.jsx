@@ -9,6 +9,7 @@ function Button({ children, height, width, borderRadius }) {
     backgroundColor: "#fe6b6f",
     display: "flex",
     alignItems: "center",
+    color: "#fff",
   };
   return <button style={buttonStyle}>{children}</button>;
 }
