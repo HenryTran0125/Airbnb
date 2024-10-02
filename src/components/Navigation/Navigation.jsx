@@ -8,24 +8,28 @@ import Button from "../../common/Button/Button";
 import { useEffect, useState } from "react";
 function Navigation() {
   const location = useLocation();
-  // console.log(location.pathname);
-  // const [isScrolled, setIsScrolled] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+  if (location.pathname !== "/") console.log("different");
 
-  // const handleScroll = () => {
-  //   const scrollY = window.scrollY; // Lấy vị trí cuộn
-  //   setIsScrolled(scrollY > 100); // Thay đổi giá trị 100 theo khoảng cách bạn muốn
-  // };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 900) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll); // Dọn dẹp sự kiện khi component unmount
-  //   };
-  // }, []);
+    // Cleanup function
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className={styles.nav}>
+    <nav className={scrolling ? styles.activeNav : styles.nav}>
       <div className={styles.container}>
         <Link to="/" className={styles.link}>
           <img src={logo} className={styles.image} alt="Logo" />
@@ -36,7 +40,12 @@ function Navigation() {
           {["Home", "About", "Services", "Pricing", "Contact"].map(
             (item, index) => (
               <li key={index}>
-                <Link to={item.toLowerCase()} className={styles.linkElement}>
+                <Link
+                  to={item.toLowerCase()}
+                  className={
+                    scrolling ? styles.linkElementScrolling : styles.linkElement
+                  }
+                >
                   {item}
                 </Link>
               </li>
