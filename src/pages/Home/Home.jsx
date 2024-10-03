@@ -5,7 +5,6 @@ import Carousel from "../../components/Carousel/Carousel";
 import Categories from "../../components/Categories/Categories";
 import SearchingArea from "../../components/SearchingArea/SearchingArea";
 import styles from "./page.module.css";
-import DateRangeBooking from "../../components/DateRangeBooking/DateRangeBooking";
 
 function Home() {
   return (
@@ -14,8 +13,6 @@ function Home() {
         <Carousel />
 
         <SearchingArea isHomePage={true} />
-
-        <DateRangeBooking />
       </div>
 
       <BookingLocation />

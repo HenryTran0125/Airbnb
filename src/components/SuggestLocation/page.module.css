@@ -1,0 +1,120 @@
+.container {
+  text-align: center;
+  border-right: 1px solid #d1d5dc;
+  flex: 1;
+  position: relative;
+  height: 5.4rem;
+}
+
+.suggestingContainer {
+  position: absolute;
+  top: 570%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50rem;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+  filter: blur(50%);
+  border: 1px solid #d1d5dc;
+  border-radius: 2rem;
+  z-index: 10;
+}
+
+.suggestingContent {
+  padding: 2rem;
+  position: relative;
+}
+
+.text {
+  font-size: 1.8rem;
+  font-weight: 450;
+  color: #fff;
+  cursor: pointer;
+}
+
+.textIsNotHomePage {
+  font-size: 1.8rem;
+  font-weight: 450;
+  color: black;
+  cursor: pointer;
+}
+
+.textWhereWillYouGo {
+  font-size: 1.8rem;
+  font-weight: 450;
+  color: #d1d5dc;
+  cursor: pointer;
+}
+
+.textYouWillGo {
+  color: #63e6be;
+  font-size: 1.8rem;
+  font-weight: 450;
+  cursor: pointer;
+}
+
+.h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+  color: #fff;
+}
+
+.ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
+  list-style-type: none;
+  justify-content: start;
+  margin: 0 auto;
+}
+
+.li {
+  width: 31%;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.imgContainer {
+  margin-bottom: 0.5rem;
+}
+
+.img {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 1rem;
+}
+
+.locationText {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.1rem;
+}
+
+.button {
+  position: absolute;
+  font-size: 2rem;
+  border: none;
+  background-color: transparent;
+  top: 3%;
+  right: 3%;
+  color: #fff;
+}
+
+.closeButton {
+  height: 4rem;
+  width: 4rem;
+}

@@ -1,35 +1,19 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import styles from "./page.module.css";
-import search from "../../assets/icon/search.svg";
+import SuggestLocation from "../SuggestLocation/SuggestLocation";
+import BookingDate from "../BookingDate/BookingDate";
+import AddingGuest from "../AddingGuest/AddingGuest";
 
 function BookingInformation({ isHomePage }) {
   return (
     <div className={styles.container}>
       <div className={styles.alignment}>
-        <div className={styles.bookingArea}>
-          <div className={isHomePage ? styles.text : styles.textIsNotHomePage}>
-            Địa điểm
-          </div>
+        <SuggestLocation isHomePage={isHomePage} />
 
-          <div className={styles.textWhereWillYouGo}>Bạn sắp đi đâu</div>
-        </div>
+        <BookingDate isHomePage={isHomePage} />
 
-        <div className={styles.bookingArea}>
-          <div className={isHomePage ? styles.text : styles.textIsNotHomePage}>
-            21/09/2024 - 30/09/2024
-          </div>
-        </div>
-
-        <div className={styles.addingGuest}>
-          <div className={isHomePage ? styles.text : styles.textIsNotHomePage}>
-            Thêm khách
-          </div>
-
-          <div className={styles.imageContainer}>
-            <img src={search} className={styles.search} />
-          </div>
-        </div>
+        <AddingGuest isHomePage={isHomePage} />
       </div>
     </div>
   );

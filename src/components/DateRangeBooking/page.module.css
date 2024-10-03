@@ -1,3 +1,10 @@
+.container {
+  padding: 4.8rem;
+  background-color: #fff;
+  border: 1px solid #d1d5dc;
+  border-radius: 2rem;
+}
+
 .dateRangePicker {
   width: 100%;
   height: auto;
