@@ -1,0 +1,36 @@
+.firstRowContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  margin-right: 1rem;
+  font-weight: 700;
+}
+
+.img {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.textReview {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  color: #4b5563;
+}

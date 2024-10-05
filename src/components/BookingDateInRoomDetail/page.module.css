@@ -1,0 +1,45 @@
+.dateContainer {
+  display: flex;
+  width: 100%;
+}
+
+.checkInDateContainer {
+  flex: 1;
+  border: 2px solid black;
+  border-top-left-radius: 1rem;
+  height: 100%;
+  padding: 1.2rem;
+  cursor: pointer;
+}
+
+.checkInDateContainer:hover {
+  background-color: #adb5bd;
+}
+
+.checkInText {
+  font-size: 1.6rem;
+  font-weight: 550;
+}
+
+.checkOutDateContainer {
+  flex: 1;
+  border: 2px solid black;
+  border-left: none;
+  border-top-right-radius: 1rem;
+  height: 100%;
+  padding: 1.2rem;
+  cursor: pointer;
+}
+
+.checkOutDateContainer:hover {
+  background-color: #adb5bd;
+}
+
+.checkOutText {
+  font-size: 1.6rem;
+  font-weight: 550;
+}
+
+.date {
+  font-size: 1.6rem;
+}

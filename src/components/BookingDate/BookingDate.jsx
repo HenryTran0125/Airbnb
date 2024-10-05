@@ -3,13 +3,11 @@
 import { useState } from "react";
 import styles from "./page.module.css";
 import DateRangeBooking from "../DateRangeBooking/DateRangeBooking";
-import close from "../../assets/icon/close-outline.svg";
-import CloseButton from "../../assets/icon/closeButton";
 
 function BookingDate({ isHomePage }) {
   const [checkButton, setCheckButton] = useState(false);
-  const [startDate, setStartDate] = useState();
-  const [endDate, setEndDate] = useState();
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
 
   return (
     <div className={styles.bookingArea}>
@@ -25,18 +23,8 @@ function BookingDate({ isHomePage }) {
           <DateRangeBooking
             setStartDate={setStartDate}
             setEndDate={setEndDate}
+            setCheckButton={setCheckButton}
           />
-
-          <button
-            onClick={() => setCheckButton(false)}
-            className={styles.button}
-          >
-            <CloseButton
-              fill="black"
-              stroke="black"
-              className={styles.closeButton}
-            />
-          </button>
         </div>
       )}
     </div>

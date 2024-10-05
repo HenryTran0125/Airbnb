@@ -3,9 +3,32 @@
   background-color: #fff;
   border: 1px solid #d1d5dc;
   border-radius: 2rem;
+  position: relative;
+}
+
+.containerNotHomePage {
+  padding: 4.8rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  position: relative;
 }
 
 .dateRangePicker {
   width: 100%;
   height: auto;
+}
+
+.button {
+  position: absolute;
+  font-size: 2rem;
+  border: none;
+  background-color: transparent;
+  top: 3%;
+  right: 2%;
+  color: #fff;
+}
+
+.closeButton {
+  height: 4rem;
+  width: 4rem;
 }

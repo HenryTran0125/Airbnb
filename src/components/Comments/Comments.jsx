@@ -23,7 +23,7 @@ function Comments({ data }) {
 
   const realData = dataReview?.content;
 
-  console.log(realData);
+  // console.log(realData);
 
   return (
     <section className={styles.section}>

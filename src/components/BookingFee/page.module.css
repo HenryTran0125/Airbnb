@@ -1,0 +1,54 @@
+.totalMoneyContainer {
+  margin: 3rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.moneyAndNights {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.totalMoney {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.cleaningFeeContainer {
+  margin-bottom: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cleaningText {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.feeCleaning {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.totalBeforeTaxes {
+  width: 100%;
+  border-top: 1px solid #9ca3af;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 0 0 0;
+}
+
+.totalText {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.totalAmount {
+  font-size: 2rem;
+  font-weight: 550;
+}

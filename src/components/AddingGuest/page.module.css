@@ -1,33 +1,87 @@
-.bookingArea {
+.addingGuest {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid #d1d5dc;
   flex: 1;
-  cursor: pointer;
+}
 
-  &:first-child {
-    flex-direction: column;
-  }
+.addingGuestContainer {
+  position: relative;
+}
+
+.guestAdjustmentContainer {
+  position: absolute;
+  top: 200%;
+  right: -80%;
+  border: 1px solid #fff;
+  border-radius: 3rem;
+  width: 20rem;
+}
+
+.guestAdjustmentContent {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 1.2rem 2.4rem;
+}
+
+.div {
+  font-size: 1.6rem;
+  color: #fff;
+  flex: 1;
+}
+
+.numberOfGuestAdjusted {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.button {
+  height: 2.4rem;
+  width: 2.4rem;
+  background-color: #ff5a5f;
+  border: none;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+  align-self: center;
+}
+
+.buttonDefault:disabled {
+  opacity: 0.5;
+  height: 2.4rem;
+  width: 2.4rem;
+  background-color: #ff5a5f;
+  border: none;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+  align-self: center;
+  cursor: not-allowed;
+}
+
+.numberOfGuests {
+  font-size: 1.6rem;
+  color: #fff;
 }
 
 .text {
   font-size: 1.8rem;
   font-weight: 450;
   color: #fff;
+  cursor: pointer;
 }
 
 .textIsNotHomePage {
   font-size: 1.8rem;
   font-weight: 450;
   color: black;
-}
-
-.addingGuest {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
   cursor: pointer;
 }
 

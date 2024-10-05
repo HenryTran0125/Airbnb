@@ -6,10 +6,11 @@ import "./app/index.css";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Home from "./pages/Home/Home";
-import About from "./pages/About";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Location from "./pages/Location/Location";
 import RoomDetail from "./pages/RoomDetail/RoomDetail";
+import { Provider } from "react-redux";
+import store from "./store";
 
 const router = createBrowserRouter([
   {
@@ -36,9 +37,11 @@ const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </Provider>
   </StrictMode>
 );

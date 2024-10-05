@@ -6,10 +6,20 @@ import logo from "../../assets/logo.svg";
 import avatar from "../../assets/icon/avatar.png";
 import Button from "../../common/Button/Button";
 import { useEffect, useState } from "react";
+import { useGetInformation } from "../../service/getUser";
+import Modal from "../Modal/Modal";
+import CloseButton from "../../assets/icon/closeButton";
+import SignUp from "../SignUp/SignUp";
+import SignIn from "../SignIn/SignIn";
+
 function Navigation() {
   const location = useLocation();
   const [scrolling, setScrolling] = useState(false);
-  if (location.pathname !== "/") console.log("different");
+  const [isCheckLogin, setIsCheckLogin] = useState(false);
+  const [signUp, setSignUp] = useState(false);
+  const [signIn, setSignIn] = useState(false);
+
+  const { data, error, isLoading } = useGetInformation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +37,28 @@ function Navigation() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  function handleCheckLogin() {
+    setIsCheckLogin(!isCheckLogin);
+  }
+
+  function handleCheckSignUp() {
+    setSignUp(true);
+    setIsCheckLogin(false);
+  }
+
+  function handleCheckSignIn() {
+    setSignIn(true);
+    setIsCheckLogin(false);
+  }
 
   return (
     <nav className={scrolling ? styles.activeNav : styles.nav}>
@@ -53,9 +85,33 @@ function Navigation() {
           )}
         </ul>
 
-        <Button borderRadius={"2rem"}>
-          <img src={avatar} className={styles.avatar} />
-        </Button>
+        <div className={styles.avatarContainer}>
+          <button onClick={() => handleCheckLogin()} className={styles.button}>
+            <img src={avatar} className={styles.avatar} />
+          </button>
+
+          {isCheckLogin && (
+            <div className={styles.logContainer}>
+              <button
+                onClick={() => handleCheckSignIn()}
+                className={styles.action}
+              >
+                Đăng nhập
+              </button>
+
+              <button
+                onClick={() => handleCheckSignUp()}
+                className={styles.action}
+              >
+                Đăng ký
+              </button>
+            </div>
+          )}
+
+          <SignUp signUp={signUp} setSignUp={setSignUp} />
+
+          <SignIn signIn={signIn} />
+        </div>
       </div>
     </nav>
   );

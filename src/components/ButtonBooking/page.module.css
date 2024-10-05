@@ -1,0 +1,25 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background-color: #fe6b6e;
+  color: #fff;
+  border: none;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.buttonContainer {
+  margin-bottom: 3rem;
+}
+
+.notPaid {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #9ca3af;
+  text-align: center;
+}

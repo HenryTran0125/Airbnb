@@ -27,6 +27,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
 .image {
@@ -46,6 +47,7 @@
   display: flex;
   list-style-type: none;
   gap: 4rem;
+  flex: 1;
 }
 
 .linkElement {
@@ -70,8 +72,60 @@
   color: black;
 }
 
+.button {
+  height: auto;
+  width: auto;
+  border-radius: 2rem;
+  background-color: #fe6b6f;
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+.avatarContainer {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
 .avatar {
   height: 4rem;
   width: 4rem;
-  /* border-radius: 50%; */
+}
+
+.logContainer {
+  border: 2px solid #d1d5dc;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 1rem;
+  padding: 1.2rem 3.6rem;
+  position: absolute;
+  top: 110%;
+  right: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.action {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  width: 100%;
+  margin: 1rem;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  background-color: transparent;
+}
+
+.action:hover {
+  background-color: #fe6b6f;
+}
+
+.closeButton {
+  height: 1.6rem;
+  width: 1.6rem;
 }
