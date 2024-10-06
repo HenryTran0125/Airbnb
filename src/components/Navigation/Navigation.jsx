@@ -110,7 +110,7 @@ function Navigation() {
 
           <SignUp signUp={signUp} setSignUp={setSignUp} />
 
-          <SignIn signIn={signIn} />
+          <SignIn signIn={signIn} setSignIn={setSignIn} setSignUp={setSignUp} />
         </div>
       </div>
     </nav>

@@ -22,7 +22,7 @@ function BookingLocation() {
   const dataContent = data.content;
 
   const filteredData = dataContent.filter((element) => element.id < 10);
-  console.log(filteredData);
+
   return (
     <div className={styles.container}>
       <div className={styles.h1Container}>

@@ -40,8 +40,6 @@ function SuggestLocation({ isHomePage }) {
     setCheckButton(false);
   }
 
-  console.log(dataLocationFilteredById);
-
   return (
     <div className={styles.container}>
       <div>
