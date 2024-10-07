@@ -11,6 +11,7 @@ import Location from "./pages/Location/Location";
 import RoomDetail from "./pages/RoomDetail/RoomDetail";
 import { Provider } from "react-redux";
 import store from "./store";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "room-detail/:room",
         element: <RoomDetail />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
       },
     ],
   },

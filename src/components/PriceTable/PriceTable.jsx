@@ -14,6 +14,7 @@ import DateRangeBooking from "../DateRangeBooking/DateRangeBooking";
 import { countingNights } from "../../helpers/countNights";
 import Modal from "../Modal/Modal";
 import ModalConfirmation from "../ModalConfirmation/ModalConfirmation";
+import { useSelector } from "react-redux";
 
 function PriceTable({ data }) {
   const [checkClickBooking, setCheckClickBooking] = useState(false);
@@ -40,9 +41,10 @@ function PriceTable({ data }) {
     startDateInDetailRoom,
     endDateInDetailRoom
   );
+  const { id, maViTri } = data;
 
   console.log(data);
-  // console.log(totalStar, numberOfReview);
+
   return (
     <div className={styles.container}>
       <RatingAndCost realData={realData} data={data} />
@@ -56,7 +58,11 @@ function PriceTable({ data }) {
 
         <AddingGuestInRoomDetail data={data} />
 
-        <ButtonBooking setCheckingBookingButton={setCheckingBookingButton} />
+        <ButtonBooking
+          startDateInDetailRoom={startDateInDetailRoom}
+          endDateInDetailRoom={endDateInDetailRoom}
+          setCheckingBookingButton={setCheckingBookingButton}
+        />
 
         <BookingFee realNightsBooking={realNightsBooking} Price={Price} />
       </div>
@@ -84,6 +90,8 @@ function PriceTable({ data }) {
           setCheckingBookingButton={setCheckingBookingButton}
           price={data.giaTien}
           realNightsBooking={realNightsBooking}
+          id={id}
+          maViTri={maViTri}
         />
       )}
     </div>

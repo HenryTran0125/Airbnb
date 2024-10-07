@@ -44,14 +44,14 @@ export function usePostUserInformation() {
 
     onSuccess: (data) => {
       // Thực hiện hành động khi POST thành công
-      console.log("Success! User information posted:", data);
+      // console.log("Success! User information posted:", data);
       //   alert("User successfully signed up!");
     },
 
     onError: (error) => {
       // Thực hiện hành động khi có lỗi xảy ra
-      console.error("Error:", error.message);
-      alert(`Error occurred: ${error.message}`);
+      // console.error("Error:", error.message);
+      // alert(`Error occurred: ${error.message}`);
     },
   });
 }

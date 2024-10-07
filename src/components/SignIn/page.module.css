@@ -71,3 +71,11 @@
   cursor: pointer;
   border: none;
 }
+
+.userName {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  cursor: pointer;
+}

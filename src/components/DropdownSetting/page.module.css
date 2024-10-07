@@ -1,0 +1,28 @@
+.logContainer {
+  border: 2px solid #d1d5dc;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.2rem 3.6rem;
+  position: absolute;
+  top: 110%;
+  right: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.action {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: black;
+  width: 100%;
+  margin: 1rem;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  background-color: transparent;
+}
+
+.action:hover {
+  background-color: #fe6b6f;
+}

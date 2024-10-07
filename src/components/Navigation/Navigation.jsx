@@ -4,20 +4,24 @@ import { Link, useLocation } from "react-router-dom";
 
 import logo from "../../assets/logo.svg";
 import avatar from "../../assets/icon/avatar.png";
-import Button from "../../common/Button/Button";
 import { useEffect, useState } from "react";
 import { useGetInformation } from "../../service/getUser";
-import Modal from "../Modal/Modal";
-import CloseButton from "../../assets/icon/closeButton";
 import SignUp from "../SignUp/SignUp";
 import SignIn from "../SignIn/SignIn";
+import { useSelector } from "react-redux";
+import DropdownSetting from "../DropdownSetting/DropdownSetting";
+import UserSetting from "../UserSetting/UserSetting";
 
 function Navigation() {
   const location = useLocation();
   const [scrolling, setScrolling] = useState(false);
   const [isCheckLogin, setIsCheckLogin] = useState(false);
+  const [isCheckUserSetting, setIsCheckUserSetting] = useState(false);
   const [signUp, setSignUp] = useState(false);
   const [signIn, setSignIn] = useState(false);
+  const userName = useSelector((state) => state.storeInformation.name);
+  const email = useSelector((state) => state.storeInformation.email);
+  const id = useSelector((state) => state.storeInformation.id);
 
   const { data, error, isLoading } = useGetInformation();
 
@@ -47,7 +51,11 @@ function Navigation() {
   }
 
   function handleCheckLogin() {
-    setIsCheckLogin(!isCheckLogin);
+    if (userName) {
+      setIsCheckUserSetting(!isCheckUserSetting);
+    } else {
+      setIsCheckLogin(!isCheckLogin);
+    }
   }
 
   function handleCheckSignUp() {
@@ -92,25 +100,35 @@ function Navigation() {
 
           {isCheckLogin && (
             <div className={styles.logContainer}>
-              <button
-                onClick={() => handleCheckSignIn()}
-                className={styles.action}
-              >
-                Đăng nhập
-              </button>
+              <DropdownSetting
+                handleCheckSignIn={handleCheckSignIn}
+                handleCheckSignUp={handleCheckSignUp}
+              />
+            </div>
+          )}
 
-              <button
-                onClick={() => handleCheckSignUp()}
-                className={styles.action}
-              >
-                Đăng ký
-              </button>
+          {isCheckUserSetting && (
+            <div className={styles.logContainer}>
+              <UserSetting userName={userName} email={email} />
             </div>
           )}
 
           <SignUp signUp={signUp} setSignUp={setSignUp} />
 
           <SignIn signIn={signIn} setSignIn={setSignIn} setSignUp={setSignUp} />
+
+          {userName ? (
+            <div onClick={() => handleCheckLogin()} className={styles.userName}>
+              {userName}
+            </div>
+          ) : (
+            <div
+              onClick={() => handleCheckLogin()}
+              className={styles.logInLogOut}
+            >
+              Login/ Logout
+            </div>
+          )}
         </div>
       </div>
     </nav>

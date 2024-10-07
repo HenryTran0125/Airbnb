@@ -5,19 +5,41 @@ import styles from "./page.module.css";
 import CloseButton from "../../assets/icon/closeButton";
 import { useForm } from "react-hook-form";
 import { usePostUserAccount } from "../../service/postUserAccount";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  saveEmail,
+  saveId,
+  saveUserName,
+} from "../../store/slices/storeUserInformation";
+import toast from "react-hot-toast";
 
 function SignIn({ setSignIn, signIn, setSignUp }) {
   const { register, handleSubmit } = useForm();
   const mutation = usePostUserAccount();
-  const [userData, setUserData] = useState(null);
+  const dataResponse = mutation.data?.content?.user;
+  const userName = useSelector((state) => state.storeInformation.name);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (mutation.isSuccess && dataResponse?.name) {
+      dispatch(saveUserName(dataResponse?.name));
+      dispatch(saveEmail(dataResponse?.email));
+      dispatch(saveId(dataResponse?.id));
+      toast.success("Login successfully!");
+    }
+  }, [mutation.isSuccess, dataResponse]);
 
   if (mutation.isLoading) {
     return <div>Loading...</div>;
   }
 
   if (mutation.isError) {
-    return <div>Error: {mutation.error.message}</div>;
+    return toast.error(`Error: ${mutation.error.message}`);
+  }
+
+  if (mutation.isSuccess) {
+    console.log("Get data successfully!");
   }
 
   function signInSubmission(data) {
@@ -30,6 +52,8 @@ function SignIn({ setSignIn, signIn, setSignUp }) {
     setSignIn(false);
     setSignUp(true);
   }
+
+  console.log(userName);
 
   return (
     <>

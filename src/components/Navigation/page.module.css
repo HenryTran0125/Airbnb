@@ -97,10 +97,8 @@
 
 .logContainer {
   border: 2px solid #d1d5dc;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background-color: #fff;
   border-radius: 1rem;
-  padding: 1.2rem 3.6rem;
   position: absolute;
   top: 110%;
   right: 4%;
@@ -112,7 +110,7 @@
 .action {
   font-size: 1.6rem;
   font-weight: 500;
-  color: #fff;
+  color: black;
   width: 100%;
   margin: 1rem;
   cursor: pointer;
@@ -128,4 +126,20 @@
 .closeButton {
   height: 1.6rem;
   width: 1.6rem;
+}
+
+.userName {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-left: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.logInLogOut {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-left: 1.2rem;
+  color: #fff;
+  cursor: pointer;
 }

@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { signUpData } from "../../data/SignUp";
 import { useState } from "react";
 import { usePostUserInformation } from "../../service/postUserInformation";
+import toast from "react-hot-toast";
 
 function SignUp({ signUp, setSignUp }) {
   const [gender, setGender] = useState(null);
@@ -23,7 +24,7 @@ function SignUp({ signUp, setSignUp }) {
   }
 
   if (mutation.isSuccess) {
-    return alert("User successfully registered!");
+    return toast.success("Sign Up successfully!");
   }
 
   function handleChange(e) {
