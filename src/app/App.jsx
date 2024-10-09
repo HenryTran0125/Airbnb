@@ -9,20 +9,6 @@ import { useEffect } from "react";
 import { fetchWithToken } from "../config/apiConfig";
 
 function App() {
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const data = await fetchWithToken(
-          "https://api.example.com/your-endpoint"
-        );
-        console.log(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    getData(); // Gọi hàm để lấy dữ liệu khi ứng dụng khởi động
-  }, []);
   return (
     <>
       <Toaster />
