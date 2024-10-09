@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import styles from "./page.module.css";
-import CloseButton from "../../assets/icon/closeButton";
+import CloseButton from "../../assets/icon/CloseButton";
 import Modal from "../Modal/Modal";
 import { useForm } from "react-hook-form";
 import { signUpData } from "../../data/SignUp";
