@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
 import Modal from "../Modal/Modal";
-import CloseButton from "../../assets/icon/closeButton";
+import CloseButton from "../../assets/icon/CloseButton";
 import { cleanUserInformation } from "../../store/slices/storeUserInformation";
 
 function SignOut({ signOut, setSignOut }) {

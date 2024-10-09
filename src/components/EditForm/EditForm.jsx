@@ -13,7 +13,7 @@ import {
   saveUserName,
 } from "../../store/slices/storeUserInformation";
 import { useEffect, useState } from "react";
-import CloseButton from "../../assets/icon/closeButton";
+import CloseButton from "../../assets/icon/CloseButton";
 import { convertToDateFormat } from "../../helpers/convertToDateFormatPUT";
 import { usePutUserInformation } from "../../service/putUserInformation";
 import toast from "react-hot-toast";

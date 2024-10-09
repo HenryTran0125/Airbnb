@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import Modal from "../Modal/Modal";
 import styles from "./page.module.css";
-import CloseButton from "../../assets/icon/closeButton";
+import CloseButton from "../../assets/icon/CloseButton";
 import { Controller, useForm } from "react-hook-form";
 import { usePostUserAccount } from "../../service/postUserAccount";
 import { useEffect, useState } from "react";

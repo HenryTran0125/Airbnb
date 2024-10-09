@@ -8,7 +8,7 @@ import { addDays } from "date-fns";
 import styles from "./page.module.css";
 import { FormatDate } from "../../helpers/formattedDate";
 import { useLocation } from "react-router-dom";
-import CloseButton from "../../assets/icon/closeButton";
+import CloseButton from "../../assets/icon/CloseButton";
 
 function DateRangeBooking({
   setStartDate,

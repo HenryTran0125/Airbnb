@@ -3,8 +3,7 @@
 import { useLocation } from "../../service/getBookingLocation";
 import styles from "./page.module.css";
 import { useState } from "react";
-import close from "../../assets/icon/close-outline.svg";
-import CloseButton from "../../assets/icon/closeButton";
+import CloseButton from "../../assets/icon/CloseButton";
 
 function SuggestLocation({ isHomePage }) {
   const [checkButton, setCheckButton] = useState(false);
