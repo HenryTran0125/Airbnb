@@ -9,7 +9,7 @@ function Convenience({ item }) {
   return (
     <div className={styles.contentContainer}>
       <div>
-        <h3 className={styles.h3}>{correctUrlRoomName(item.tenPhong)}</h3>
+        <h3 className={styles.h3}>{correctUrlRoomName(item?.tenPhong)}</h3>
 
         <ContentConvenience keyword={"Tiện nghi"} data={item} />
 

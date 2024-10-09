@@ -11,6 +11,8 @@ import SignIn from "../SignIn/SignIn";
 import { useSelector } from "react-redux";
 import DropdownSetting from "../DropdownSetting/DropdownSetting";
 import UserSetting from "../UserSetting/UserSetting";
+import Modal from "../Modal/Modal";
+import SignOut from "../Sign Out/SignOut";
 
 function Navigation() {
   const location = useLocation();
@@ -19,15 +21,31 @@ function Navigation() {
   const [isCheckUserSetting, setIsCheckUserSetting] = useState(false);
   const [signUp, setSignUp] = useState(false);
   const [signIn, setSignIn] = useState(false);
-  const userName = useSelector((state) => state.storeInformation.name);
-  const email = useSelector((state) => state.storeInformation.email);
-  const id = useSelector((state) => state.storeInformation.id);
+  const [signOut, setSignOut] = useState(false);
+
+  const userName = useSelector(
+    (state) => state.updateInformation.name || state.storeInformation.name
+  );
+  const email = useSelector(
+    (state) => state.updateInformation.email || state.storeInformation.email
+  );
+  const id = useSelector(
+    (state) => state.updateInformation.id || state.storeInformation.id
+  );
 
   const { data, error, isLoading } = useGetInformation();
+  const locationPage = location.pathname.includes("/location");
+  const locationRoomDetail = location.pathname.includes("/room-detail");
+  const dashboardPage = location.pathname.includes("/dashboard");
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 900) {
+        setScrolling(true);
+      } else if (
+        (dashboardPage && window.scrollY > 300) ||
+        (locationPage && window.scrollY > 300)
+      ) {
         setScrolling(true);
       } else {
         setScrolling(false);
@@ -40,7 +58,7 @@ function Navigation() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [locationPage, dashboardPage]);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -69,7 +87,11 @@ function Navigation() {
   }
 
   return (
-    <nav className={scrolling ? styles.activeNav : styles.nav}>
+    <nav
+      className={
+        locationRoomDetail || scrolling ? styles.activeNav : styles.nav
+      }
+    >
       <div className={styles.container}>
         <Link to="/" className={styles.link}>
           <img src={logo} className={styles.image} alt="Logo" />
@@ -81,9 +103,11 @@ function Navigation() {
             (item, index) => (
               <li key={index}>
                 <Link
-                  to={item.toLowerCase()}
+                  to={item.toLowerCase() === "home" && "/"}
                   className={
-                    scrolling ? styles.linkElementScrolling : styles.linkElement
+                    locationRoomDetail || scrolling
+                      ? styles.linkElementScrolling
+                      : styles.linkElement
                   }
                 >
                   {item}
@@ -101,6 +125,7 @@ function Navigation() {
           {isCheckLogin && (
             <div className={styles.logContainer}>
               <DropdownSetting
+                setSignIn={setSignIn}
                 handleCheckSignIn={handleCheckSignIn}
                 handleCheckSignUp={handleCheckSignUp}
               />
@@ -109,7 +134,12 @@ function Navigation() {
 
           {isCheckUserSetting && (
             <div className={styles.logContainer}>
-              <UserSetting userName={userName} email={email} />
+              <UserSetting
+                setIsCheckUserSetting={setIsCheckUserSetting}
+                userName={userName}
+                email={email}
+                setSignOut={setSignOut}
+              />
             </div>
           )}
 
@@ -117,14 +147,27 @@ function Navigation() {
 
           <SignIn signIn={signIn} setSignIn={setSignIn} setSignUp={setSignUp} />
 
+          <SignOut signOut={signOut} setSignOut={setSignOut} />
+
           {userName ? (
-            <div onClick={() => handleCheckLogin()} className={styles.userName}>
+            <div
+              onClick={() => handleCheckLogin()}
+              className={
+                locationRoomDetail || scrolling
+                  ? styles.userNameScrolling
+                  : styles.userName
+              }
+            >
               {userName}
             </div>
           ) : (
             <div
               onClick={() => handleCheckLogin()}
-              className={styles.logInLogOut}
+              className={
+                locationRoomDetail || scrolling
+                  ? styles.logInLogOutScrolling
+                  : styles.logInLogOut
+              }
             >
               Login/ Logout
             </div>

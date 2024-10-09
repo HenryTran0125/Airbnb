@@ -2,8 +2,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const storeUserInformation = createSlice({
-  name: "userName",
-  initialState: { name: undefined, email: undefined, id: undefined },
+  name: "user",
+  initialState: {
+    name: undefined,
+    email: undefined,
+    id: null,
+    phone: undefined,
+    birthday: undefined,
+    gender: undefined,
+  },
   reducers: {
     saveUserName: (state, action) => {
       console.log(action.payload);
@@ -16,11 +23,43 @@ const storeUserInformation = createSlice({
     },
 
     saveId: (state, action) => {
-      console.log(action.payload);
+      console.log("id: ", action.payload);
       state.id = action.payload;
+    },
+
+    savePhone: (state, action) => {
+      console.log(action.payload);
+      state.phone = action.payload;
+    },
+
+    saveBirthday: (state, action) => {
+      console.log(action.payload);
+      state.birthday = action.payload;
+    },
+
+    saveGender: (state, action) => {
+      console.log(action.payload);
+      state.gender = action.payload;
+    },
+
+    cleanUserInformation: (state, action) => {
+      state.name = action.payload;
+      state.email = action.payload;
+      state.id = action.payload;
+      state.phone = action.payload;
+      state.birthday = action.payload;
+      state.gender = action.payload;
     },
   },
 });
 
-export const { saveUserName, saveEmail, saveId } = storeUserInformation.actions;
+export const {
+  saveUserName,
+  saveEmail,
+  saveId,
+  savePhone,
+  saveBirthday,
+  saveGender,
+  cleanUserInformation,
+} = storeUserInformation.actions;
 export default storeUserInformation.reducer;

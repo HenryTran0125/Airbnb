@@ -1,105 +1,13 @@
 .container {
   margin: 0 auto;
-  padding: 2rem 0;
-  width: 153.6rem;
+  padding: 2rem;
+  /* width: 153.6rem; */
   display: flex;
   gap: 2rem;
 }
 
-.informationContainer {
-  border: 1px solid #d1d5dc;
-  border-radius: 1rem;
-}
-
-.upLoadImageContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.img {
-  height: 14.4rem;
-  width: 14.4rem;
-}
-
-.upLoadImageText {
-  font-size: 1.4rem;
-  color: black;
-  font-weight: 700;
-  text-decoration: underline;
-  letter-spacing: 0.1rem;
-}
-
-.certifiedContainer {
-  width: 100%;
-  padding: 2.4rem 2rem;
-}
-
-.certifiedDescription {
-  width: 100%;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.imgCertified {
-  height: 2.4rem;
-  width: 2.4rem;
-}
-
-.certifiedText {
-  font-size: 2rem;
-  color: black;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
-}
-
-.p {
-  font-size: 1.4rem;
-  letter-spacing: 0.2rem;
-  margin-bottom: 2rem;
-  width: 95%;
-}
-
-.buttonContainer {
-  border-bottom: 1px solid #d1d5dc;
-  padding-bottom: 2.4rem;
-}
-
-.button {
-  padding: 1.2rem 2.4rem;
-  background-color: #fff;
-  font-size: 1.4rem;
-  border: 1px solid #d1d5dc;
-  border-radius: 1rem;
-}
-
-.emailConfirmationContainer {
-  width: 100%;
-  padding: 1.2rem 3rem;
-}
-
-.h1 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-}
-
-.emailConfirmation {
-  display: flex;
-  gap: 1rem;
-}
-
-.emailImage {
-  height: 1.4rem;
-  width: 1.25rem;
-}
-
-.emailText {
-  font-size: 1.4rem;
+.roomContainer {
+  flex: 1;
 }
 
 .welcome {

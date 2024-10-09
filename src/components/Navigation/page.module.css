@@ -4,6 +4,7 @@
   position: fixed;
   width: 100vw;
   z-index: 10;
+  /* border-bottom: 1px solid #d1d5dc; */
 }
 
 .activeNav {
@@ -13,6 +14,7 @@
   position: fixed;
   width: 100vw;
   z-index: 10;
+  border-bottom: 1px solid #d1d5dc;
 }
 
 .container {
@@ -105,6 +107,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1.2rem 2.4rem;
 }
 
 .action {
@@ -136,10 +139,26 @@
   cursor: pointer;
 }
 
+.userNameScrolling {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-left: 1.2rem;
+  color: black;
+  cursor: pointer;
+}
+
 .logInLogOut {
   font-size: 1.6rem;
   font-weight: 400;
   margin-left: 1.2rem;
   color: #fff;
+  cursor: pointer;
+}
+
+.logInLogOutScrolling {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-left: 1.2rem;
+  color: black;
   cursor: pointer;
 }

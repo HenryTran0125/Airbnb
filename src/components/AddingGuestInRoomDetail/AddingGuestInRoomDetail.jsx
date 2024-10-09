@@ -6,10 +6,20 @@ import {
   decrement,
   increment,
 } from "../../store/slices/addingGuestInRoomDetail";
+import toast from "react-hot-toast";
 
 function AddingGuestInRoomDetail({ data }) {
   const guests = useSelector((state) => state.addGuestInRoom.guest);
   const dispatch = useDispatch();
+
+  if (guests == data.khach)
+    toast((t) => (
+      <span style={{ fontSize: "2rem", color: "#f03e3e", top: "4rem" }}>
+        {" "}
+        ⛔ Đã đạt số khách tối đa
+      </span>
+    ));
+
   return (
     <div className={styles.guestContainer}>
       <div className={styles.guest}>Khách</div>

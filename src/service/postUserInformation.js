@@ -44,7 +44,7 @@ export function usePostUserInformation() {
 
     onSuccess: (data) => {
       // Thực hiện hành động khi POST thành công
-      // console.log("Success! User information posted:", data);
+      console.log("Success! User information posted:", data);
       //   alert("User successfully signed up!");
     },
 

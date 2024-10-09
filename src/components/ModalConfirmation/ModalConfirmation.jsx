@@ -7,6 +7,7 @@ import styles from "./page.module.css";
 import { officialPrice } from "../../helpers/officialPrice";
 import { usePostBooking } from "../../service/postBooking";
 import { convertDate } from "../../helpers/convertDate";
+import toast from "react-hot-toast";
 
 function ModalConfirmation({
   setCheckingBookingButton,
@@ -26,29 +27,33 @@ function ModalConfirmation({
     return <div>Loading...</div>;
   }
 
-  if (mutation.isSuccess) {
-    console.log("Successfully Post!");
-  }
-
   if (mutation.isError) {
     console.log(`Error: ${mutation.error.message}`);
   }
 
-  console.log(typeof idInformation);
+  if (mutation.isSuccess) {
+    return console.log("Successful Data: ", mutation.data);
+  }
 
-  function handleConfirmation() {
-    const dataBooking = {
-      idRoom: id,
-      idLocation: maViTri,
-      startDate: convertDate(startDateInDetailRoom),
-      endDate: convertDate(endDateInDetailRoom),
-      guest: guests,
-      idUser: idInformation,
-    };
+  const dataBooking = {
+    id: maViTri,
+    maPhong: id,
+    ngayDen: startDateInDetailRoom,
+    ngayDi: endDateInDetailRoom,
+    soLuongKhach: guests,
+    maNguoiDung: idInformation,
+  };
 
+  function handleConfirmation(dataConfirmation) {
     console.log(dataBooking);
-
-    mutation.mutate(dataBooking);
+    mutation.mutate(dataConfirmation);
+    setCheckingBookingButton(false);
+    toast.success(
+      <span style={{ fontSize: "1.4rem", color: "green" }}>
+        Great! Successfully Added this beautiful place.
+      </span>,
+      { duration: 7000 }
+    );
   }
 
   return (
@@ -74,7 +79,7 @@ function ModalConfirmation({
 
           <div className={styles.buttonContainer}>
             <button
-              onClick={() => handleConfirmation()}
+              onClick={() => handleConfirmation(dataBooking)}
               className={styles.button}
             >
               Xác nhận

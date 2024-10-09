@@ -27,6 +27,8 @@ export async function postUserAccount(userAccount) {
 
   const data = await response.json();
 
+  console.log("1", data);
+
   return data;
 }
 

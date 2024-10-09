@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+import { Link } from "react-router-dom";
 import styles from "./page.module.css";
 
 function FooterLayout({ title, array }) {
@@ -11,9 +12,13 @@ function FooterLayout({ title, array }) {
 
       <ul className={styles.ul}>
         {array.map((item, index) => (
-          <li className={styles.li} key={index}>
+          <Link
+            to={"https://www.airbnb.com/"}
+            className={styles.li}
+            key={index}
+          >
             {item}
-          </li>
+          </Link>
         ))}
       </ul>
     </div>

@@ -43,7 +43,7 @@ function PriceTable({ data }) {
   );
   const { id, maViTri } = data;
 
-  console.log(data);
+  console.log(dataReview);
 
   return (
     <div className={styles.container}>

@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import styles from "./page.module.css";
 import ReactDOM from "react-dom";
-import { useLocation } from "react-router-dom";
 
 function Modal({ children, onclose }) {
   useEffect(() => {

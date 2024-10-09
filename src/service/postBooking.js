@@ -3,15 +3,16 @@ import apiToken from "../config/apiConfig";
 
 /* eslint-disable no-unused-vars */
 export async function postBooking(dataBooking) {
-  const { idRoom, startDate, endDate, guest, idUser, idLocation } = dataBooking;
+  const { id, maPhong, ngayDen, ngayDi, soLuongKhach, maNguoiDung } =
+    dataBooking;
 
   const bookingInformation = {
-    idRoom,
-    idLocation,
-    startDate,
-    endDate,
-    guest,
-    idUser,
+    id,
+    maPhong,
+    ngayDen,
+    ngayDi,
+    soLuongKhach,
+    maNguoiDung,
   };
 
   const response = await fetch(

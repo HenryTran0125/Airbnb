@@ -14,7 +14,10 @@ function Stars() {
 
   function handleClick(index) {
     setClick((currClick) => (currClick == index ? 0 : index));
+    setCurrentStar(index);
   }
+
+  console.log(currentStar);
 
   return (
     <div className={styles.imgContainer}>
@@ -22,7 +25,7 @@ function Stars() {
         <div
           key={index}
           onMouseEnter={() => handleHover(index + 1)}
-          onMouseLeave={() => setCurrentStar(null)}
+          onMouseLeave={() => setCurrentStar(click)}
           onClick={() => handleClick(index + 1)}
         >
           <svg

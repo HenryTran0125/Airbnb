@@ -22,6 +22,8 @@ function RoomInformation({ data }) {
       key === "khach"
   );
 
+  console.log(data);
+
   return (
     <div>
       <h1 className={styles.h1}>{data.tenPhong}</h1>

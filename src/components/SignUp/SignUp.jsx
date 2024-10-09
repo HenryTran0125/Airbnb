@@ -24,7 +24,7 @@ function SignUp({ signUp, setSignUp }) {
   }
 
   if (mutation.isSuccess) {
-    return toast.success("Sign Up successfully!");
+    return console.log("Sign Up successfully: ", mutation.data);
   }
 
   function handleChange(e) {
@@ -35,6 +35,11 @@ function SignUp({ signUp, setSignUp }) {
     const submitData = { ...data, gender: true };
     console.log("Submitting data:", submitData);
     mutation.mutate(submitData);
+    toast.success(
+      <span style={{ fontSize: "1.4rem", color: "green" }}>
+        Sign Up successfully!
+      </span>
+    );
   }
 
   return (

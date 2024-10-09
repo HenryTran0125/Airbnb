@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import styles from "./page.module.css";
 
-function DropdownSetting({ handleCheckSignIn, handleCheckSignUp }) {
+function DropdownSetting({ handleCheckSignIn, handleCheckSignUp, setSignIn }) {
   return (
     <>
       <button onClick={() => handleCheckSignIn()} className={styles.action}>
