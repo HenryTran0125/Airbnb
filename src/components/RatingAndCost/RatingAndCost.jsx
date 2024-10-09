@@ -18,8 +18,6 @@ function RatingAndCost({ data, realData }) {
     ?.map((item) => item.saoBinhLuan)
     ?.reduce((acc, curr) => acc + curr, 0);
 
-  console.log(realData);
-
   return (
     <div className={styles.firstRowContainer}>
       <div className={styles.price}>${Price}/ night</div>

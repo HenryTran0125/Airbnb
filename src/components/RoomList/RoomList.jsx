@@ -8,11 +8,7 @@ function RoomList({ data, city }) {
     return <div>No data available</div>;
   }
 
-  console.log(Array.isArray(data));
-
   const places = data.length;
-
-  console.log(data);
 
   return (
     <div className={styles.container}>

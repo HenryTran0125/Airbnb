@@ -17,8 +17,6 @@ function Stars() {
     setCurrentStar(index);
   }
 
-  console.log(currentStar);
-
   return (
     <div className={styles.imgContainer}>
       {array.map((_, index) => (

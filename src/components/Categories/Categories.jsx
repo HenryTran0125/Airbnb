@@ -27,12 +27,10 @@ function Categories() {
       ...data2[index],
     }));
 
-    console.log(combined);
     return combined;
   }
 
   const result = CombineObject(filteredData, categories);
-  console.log(result);
 
   return (
     <section className={styles.section}>

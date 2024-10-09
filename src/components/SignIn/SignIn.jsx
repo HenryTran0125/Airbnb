@@ -105,8 +105,6 @@ function SignIn({ setSignIn, setSignUp, signIn }) {
     setSignUp(true);
   }
 
-  console.log(dataResponse?.id, id);
-
   return (
     <>
       {signIn && (

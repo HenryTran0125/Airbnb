@@ -43,8 +43,6 @@ function PriceTable({ data }) {
   );
   const { id, maViTri } = data;
 
-  console.log(dataReview);
-
   return (
     <div className={styles.container}>
       <RatingAndCost realData={realData} data={data} />
