@@ -4,7 +4,6 @@ import styles from "./page.module.css";
 import { useSelector } from "react-redux";
 import RoomInDashboard from "../RoomInDashboard/RoomInDashboard";
 import { useGetBookingByUser } from "../../service/getBookingByUser";
-import { usePutUserInformation } from "../../service/putUserInformation";
 import { useState } from "react";
 import EditForm from "../EditForm/EditForm";
 import CertifiedInformation from "../CertifiedInformation/CertifiedInformation";
@@ -16,12 +15,9 @@ function DashboardUserInformation() {
   const userInfo = localStorage.getItem("userInfo");
   let userId;
 
-  // Kiểm tra nếu có dữ liệu
   if (userInfo) {
-    // Parse dữ liệu từ chuỗi JSON thành object
     const parsedUserInfo = JSON.parse(userInfo);
 
-    // Lấy id từ object
     userId = parsedUserInfo.id;
 
     console.log("User ID:", userId);

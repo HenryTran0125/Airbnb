@@ -27,7 +27,6 @@
   font-size: 1.8rem;
   font-weight: 600;
 }
-
 .input {
   width: 100%;
   height: auto;
@@ -78,4 +77,33 @@
   font-weight: 600;
   margin-left: 1rem;
   cursor: pointer;
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .input {
+    width: 100%;
+    height: auto;
+    padding: 1.2rem;
+    border: 1px solid #d1d5dc;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    background-color: #fff;
+    color: black;
+  }
+
+  .createAccountContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .createAccount {
+    color: #4263eb;
+    margin-top: 2rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+  }
 }

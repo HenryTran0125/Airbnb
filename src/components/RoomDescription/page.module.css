@@ -44,3 +44,15 @@
   height: auto;
   border-radius: 2rem;
 }
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .ul {
+    /* overflow: hidden; */
+    width: 100%;
+  }
+
+  .li {
+    list-style-type: none;
+    overflow: hidden;
+  }
+}

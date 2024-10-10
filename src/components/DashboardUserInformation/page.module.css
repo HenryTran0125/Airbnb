@@ -4,10 +4,12 @@
   /* width: 153.6rem; */
   display: flex;
   gap: 2rem;
+  justify-content: space-between;
 }
 
 .roomContainer {
   flex: 1;
+  width: 100%;
 }
 
 .welcome {
@@ -31,4 +33,11 @@
   font-weight: 400;
   color: #868e96;
   margin-bottom: 1rem;
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .roomContainer {
+    flex: 1;
+    width: 110rem;
+  }
 }

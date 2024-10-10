@@ -1,10 +1,5 @@
 /* eslint-disable no-unused-vars */
-import {
-  Outlet,
-  useLocation,
-  useParams,
-  useSearchParams,
-} from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { useGetRoomListById } from "../../service/getRoomListById";
 import LocationBackground from "../../components/LocationBackground/LocationBackground";
 import styles from "./page.module.css";

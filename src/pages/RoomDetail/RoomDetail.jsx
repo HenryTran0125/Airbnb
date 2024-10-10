@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import styles from "./page.module.css";
 import RoomInformation from "../../components/RoomInformation/RoomInformation";
 import { useGetRoomInformationById } from "../../service/getRoomInformationById";

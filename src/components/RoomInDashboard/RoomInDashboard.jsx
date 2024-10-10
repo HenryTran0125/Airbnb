@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { useSelector } from "react-redux";
 import styles from "./page.module.css";
 import { useGetRoomInformationInDashboard } from "../../service/getRoomInformationInDashboard";
 import RoomDescription from "../RoomDescription/RoomDescription";
@@ -28,9 +27,7 @@ function RoomInDashboard({ roomId, content }) {
 
       <div>
         {content.length > 0 ? (
-          <ul>
-            <RoomDescription data={realData} />
-          </ul>
+          <RoomDescription data={realData} />
         ) : (
           <div className={styles.notBooking}>Bạn chưa đặt phòng nào.</div>
         )}

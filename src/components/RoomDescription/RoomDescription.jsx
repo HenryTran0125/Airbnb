@@ -11,7 +11,7 @@ function RoomDescription({ data, dashboard }) {
   }
 
   return (
-    <ul>
+    <ul className={styles.ul}>
       {data.map((item, index) => (
         <li key={index} className={styles.li}>
           <Link

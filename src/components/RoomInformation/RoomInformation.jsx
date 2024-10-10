@@ -1,9 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { useParams } from "react-router-dom";
-import { useGetRoomInformationById } from "../../service/getRoomInformationById";
 import styles from "./page.module.css";
-import { convertInformation } from "../../helpers/convertRoomInformation";
 
 import ShortDescription from "../ShortDescription/ShortDescription";
 import RoomService from "../RoomService/RoomService";
